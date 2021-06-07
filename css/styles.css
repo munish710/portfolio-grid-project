@@ -171,7 +171,7 @@ Navbar
 ===============
 */
 .nav-links {
-  display: hidden;
+  display: none;
 }
 
 .nav {
@@ -190,7 +190,7 @@ Navbar
 
 .nav-header {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
   align-items: center;
 }
 
@@ -201,6 +201,41 @@ Navbar
   font-size: 2rem;
   cursor: pointer;
   justify-self: end;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    background: var(--clr-primary-10);
+  }
+
+  .nav-btn {
+    display: none;
+  }
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    column-gap: 2rem;
+    justify-self: end;
+  }
+
+  .nav-links a {
+    text-transform: capitalize;
+    color: var(--clr-grey-1);
+    font-weight: bold;
+    transition: var(--transition);
+    letter-spacing: var(--spacing);
+  }
+
+  .nav-links a:hover {
+    color: var(--clr-primary-5);
+  }
+
+  .nav-center {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
 }
 /* underline added to globals */
 
