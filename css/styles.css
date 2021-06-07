@@ -256,7 +256,7 @@ Sidebar
   align-items: center; */
   place-items: center;
   transition: var(--transition);
-  transform: translateX(-100%);
+  transform: translateX(100%);
 }
 
 .show-sidebar {
@@ -280,7 +280,7 @@ Sidebar
   color: var(--clr-primary-5);
 }
 
-.social-icons {
+.icons {
   display: grid;
   margin-top: 3rem;
   width: 20rem;
@@ -288,13 +288,14 @@ Sidebar
   justify-items: center;
 }
 
-.social-icon {
+.icon {
   font-size: 1.5rem;
   color: var(--clr-grey-1);
   transition: var(--transition);
+  /* background: pink; */
 }
 
-.social-icon:hover {
+.icon:hover {
   color: var(--clr-primary-5);
 }
 
