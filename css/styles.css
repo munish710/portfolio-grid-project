@@ -836,15 +836,18 @@ Blog
   height: 100%;
   backface-visibility: hidden;
   transition: all 2s linear;
+  border-radius: var(--radius);
 }
 
 .card-front {
-  background: red;
+  background: var(--clr-white);
 }
 
 .card-back {
-  background: green;
+  background: var(--clr-primary-5);
   transform: rotateY(180deg);
+  display: grid;
+  place-items: center;
 }
 
 .card:hover .card-front {
@@ -853,6 +856,43 @@ Blog
 
 .card:hover .card-back {
   transform: rotateY(0deg);
+}
+
+.card-front img {
+  height: 13rem;
+  object-fit: cover;
+  border-top-right-radius: var(--radius);
+  border-top-left-radius: var(--radius);
+}
+
+.card-info {
+  padding: 1rem 1.5rem;
+}
+
+.card-footer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.card-footer p {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  justify-self: end;
+  color: var(--clr-primary-5);
+  font-size: 0.85rem;
+}
+.card-footer img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.blog-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 3rem 1rem;
 }
 /*
 =============== 
